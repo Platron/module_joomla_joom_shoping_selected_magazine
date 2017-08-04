@@ -10,4 +10,5 @@ define('_JSHOP_PLATRON_LIFETIME_DESCRIPTION','Max 168 hours. Only for PS without
 define('_JSHOP_PLATRON_TRANSACTION_END_DESCRIPTION','Select the order status to which the actual order is set, if the ROBOKASSA IPN was successful.');
 define('_JSHOP_PLATRON_TRANSACTION_PENDING_DESCRIPTION','The order Status to which Orders are set, which have no completed Payment Transaction.');
 define('_JSHOP_PLATRON_TRANSACTION_FAILED_DESCRIPTION','Select an order status for failed ROBOKASSA transactions.');
+define('_JSHOP_PLATRON_TRANSACTION_CREATE_OFD_CHECK','Create check');
 ?>
