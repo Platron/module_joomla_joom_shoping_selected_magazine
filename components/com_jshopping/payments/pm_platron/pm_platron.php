@@ -274,7 +274,7 @@ class pm_platron extends PaymentRoot
             $ofdReceiptItem->amount   = round($item->product_item_price * $item->product_quantity, 2);
             $ofdReceiptItem->price    = round($item->product_item_price, 2);
             $ofdReceiptItem->quantity = $item->product_quantity;
-            $ofdReceiptItem->vat      = 18;
+            $ofdReceiptItem->vat      = 20;
             $ofdReceiptItems[]        = $ofdReceiptItem;
         }
         if (!is_null($order->getShippingTaxExt())) {
@@ -288,8 +288,9 @@ class pm_platron extends PaymentRoot
         $ofdReceiptItem->label    = 'Доставка';
         $ofdReceiptItem->amount   = (float) $order->order_shipping; 
         $ofdReceiptItem->price    = (float) $order->order_shipping;
-        $ofdReceiptItem->vat      = 18;
+        $ofdReceiptItem->vat      = 20;
         $ofdReceiptItem->quantity = 1;
+        $ofdReceiptItem->type = 'service';
         return $ofdReceiptItem;
     }
 
